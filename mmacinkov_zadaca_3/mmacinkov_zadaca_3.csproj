@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D43AB71B-600D-48AB-8C15-B86EE080E27D}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>mmacinkov_zadaca_3</RootNamespace>
+    <AssemblyName>mmacinkov_zadaca_3</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Klase\Aktivnost.cs" />
+    <Compile Include="Klase\Cjenik.cs" />
+    <Compile Include="Klase\LokacijeVozila.cs" />
+    <Compile Include="Klase\Tvrtka.cs" />
+    <Compile Include="UcitavanjeDatoteka\AktivnostiTXT.cs" />
+    <Compile Include="UcitavanjeDatoteka\CjenikTXT.cs" />
+    <Compile Include="UcitavanjeDatoteka\Konfiguracija_1_i_2TXT.cs" />
+    <Compile Include="UcitavanjeDatoteka\LokacijeTXT.cs" />
+    <Compile Include="UcitavanjeDatoteka\LokacijeVozilaTXT.cs" />
+    <Compile Include="UcitavanjeDatoteka\OsobeTXT.cs" />
+    <Compile Include="UcitavanjeDatoteka\TvrtkaTXT.cs" />
+    <Compile Include="UcitavanjeDatoteka\VozilaTXT.cs" />
+    <Compile Include="Uzorci\BuilderCjenik\CjenikBuildDirector.cs" />
+    <Compile Include="Uzorci\BuilderCjenik\CjenikConcreteBuilder.cs" />
+    <Compile Include="Uzorci\BuilderCjenik\ICjenikBuilder.cs" />
+    <Compile Include="Helperi\Datoteka.cs" />
+    <Compile Include="Helperi\Ispis.cs" />
+    <Compile Include="Klase\Lokacija.cs" />
+    <Compile Include="Klase\Osoba.cs" />
+    <Compile Include="Klase\Vozilo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Uzorci\BuilderLokacijeVozila\ILokacijeVozilaBuilder.cs" />
+    <Compile Include="Uzorci\BuilderLokacijeVozila\LokacijeVozilaBuildDirector.cs" />
+    <Compile Include="Uzorci\BuilderLokacijeVozila\LokacijeVozilaConcreteBuilder.cs" />
+    <Compile Include="Uzorci\BuilderTvrtka\ITvrtkaBuilder.cs" />
+    <Compile Include="Uzorci\BuilderTvrtka\TvrtkaBuildDirector.cs" />
+    <Compile Include="Uzorci\BuilderTvrtka\TvrtkaConcreteBuilder.cs" />
+    <Compile Include="Uzorci\ChainOfResponsibility\AbstractHandler.cs" />
+    <Compile Include="Uzorci\ChainOfResponsibility\EvidencijaHandler.cs" />
+    <Compile Include="Uzorci\ChainOfResponsibility\ObradaHandler.cs" />
+    <Compile Include="Uzorci\ChainOfResponsibility\PretragaHandler.cs" />
+    <Compile Include="Uzorci\Composite\CompositeTvrtka.cs" />
+    <Compile Include="Uzorci\Composite\IComponentTvrtka.cs" />
+    <Compile Include="Uzorci\Decorator\DecoratorBroj.cs" />
+    <Compile Include="Uzorci\Decorator\DecoratorKonkretniRedak.cs" />
+    <Compile Include="Uzorci\Decorator\DecoratorRedakTablice.cs" />
+    <Compile Include="Uzorci\Decorator\DecoratorText.cs" />
+    <Compile Include="Uzorci\Decorator\IDecoratorRedakTablice.cs" />
+    <Compile Include="Uzorci\Iterator\IIteratorComposite.cs" />
+    <Compile Include="Uzorci\Iterator\IIteratorLokacija.cs" />
+    <Compile Include="Uzorci\Iterator\IIteratorTvrtka.cs" />
+    <Compile Include="Uzorci\Iterator\IteratorLokacija.cs" />
+    <Compile Include="Uzorci\Iterator\IteratorTvrtka.cs" />
+    <Compile Include="Uzorci\State\IStateOsnovno.cs" />
+    <Compile Include="Uzorci\State\StateNaPunjenu.cs" />
+    <Compile Include="Uzorci\State\StateNeispravno.cs" />
+    <Compile Include="Uzorci\State\StateSlobodno.cs" />
+    <Compile Include="Uzorci\State\StateUnajmljeno.cs" />
+    <Compile Include="Uzorci\State\StateUnajmljeno2.cs" />
+    <Compile Include="Uzorci\TvrtkaSingleton.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Uzorci\MVC\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
